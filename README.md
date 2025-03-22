@@ -3,9 +3,9 @@ XXVlc Skin for VLC
 
 Flexible multi-mode skin specialized for OLED displays
 
-![XXVlc_Blush_Preview](https://user-https://github.com/gutlessCGH/XXVlc/blob/main/XXVlc%20Blush.jpg)
+![XXVlc_Blush_Preview](https://i.imgur.com/l0TUTNI.jpeg)
 
-![XXVlc_Mushroom_Preview](https://user-https://github.com/gutlessCGH/XXVlc/blob/main/XXVlc%20Mushroom.jpg)
+![XXVlc_Mushroom_Preview](https://i.imgur.com/YagEq9u.jpeg)
 
 All modes:
 - Cover art
