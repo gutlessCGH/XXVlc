@@ -35,7 +35,7 @@ Known issues:
 - Fullscreen controller won't show up immediately after applying the skin.  Close VLC and reopen to fix.
 - Right clicking on a pinned window that is playing video will result in the menu being hidden under the player.
 - Dragging & right clicking will not work on the title text, timers, and videos.  Grab the top bar, bottom corners, or cover art to drag.
-- Players can only be expanded down and to the left, a core weakness of VLC skins.
+- Players can only be expanded down and to the right, a core weakness of VLC skins.
 - Title font has a limited character set.
 
 Installation:
