@@ -1,13 +1,17 @@
 # XXVlc
-XXVlc Skins for VLC
+XXVlc Skin for VLC
 
+Flexible multi-mode skin specialized for OLED displays
 
+![XXVlc_Blush_Preview](https://user-https://github.com/gutlessCGH/XXVlc/blob/main/XXVlc%20Blush.jpg)
+
+![XXVlc_Mushroom_Preview](https://user-https://github.com/gutlessCGH/XXVlc/blob/main/XXVlc%20Mushroom.jpg)
 
 All modes:
 - Cover art
-- Jet black backgrounds for OLED Displays
+- Jet black backgrounds
 - Buttons & sliders highlight on hover, simulate being depressed when clicked, fade when unavailable
-- Fonts that minimize kerning issues
+- Fonts that minimize kerning issues inherent to VLC skins
 
 Main Player:
 - Resizable, 360x110 pixels and up
@@ -19,7 +23,7 @@ Main Player:
 Small Player:
 - 300 pixels wide
 - Cycle through 3 modes (basic, w/ playlist, w/ video/art window & playlist)
-- Playlists deploy from the bottom and are expandable, scrollable
+- Playlists deploy from the bottom and are expandable, scrollable, and track the currently playing file
 - Pin, Repeat, Shuffle, Mute, Volume Slider, and Minimize on top
 - Titles scroll across full width
 
