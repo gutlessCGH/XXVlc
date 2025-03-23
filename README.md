@@ -50,7 +50,7 @@ Text is too small/large?
 - Change size
 - Recompress folder as zip or tar; change extension to .vlt
 - This will only affect the playlists.  They are spaced based just on the font size so this won't break anything.
-- If you want a less-styled title font, try Overpass-Black.ttf size 28. https://fontmeme.com/fonts/overpass-font/
+- If you want a less-styled title font, try Overpass-Black.ttf as "titles" at size 28. https://fontmeme.com/fonts/overpass-font/
 
 Started this as an edit of the VeLoCity Skin by dmtiir
 https://github.com/dmtiir/VeLoCity-Skin-for-VLC
