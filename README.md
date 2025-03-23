@@ -30,6 +30,7 @@ Small Player:
 Minimal Player:
 - Resizable video player window with 14 pixel wide top & bottom bars
 - Additional blackout mode darkens the buttons/sliders (they still highlight on hover)
+- Skinned VLC windows will not automatically snap to one quarter or one half of the screen in windows.  The minimal player maintains a separate layout from the main player in this skin so I keep mine at 1080p.  When I want video on 1/4 of my 4k monitor, I just switch to the minimal player.
 
 Known issues:
 - Fullscreen controller won't show up immediately after applying the skin.  Close VLC and reopen to fix.
@@ -49,6 +50,7 @@ Text is too small/large?
 - Change size
 - Recompress folder as zip or tar; change extension to .vlt
 - This will only affect the playlists.  They are spaced based just on the font size so this won't break anything.
+- If you want a less-styled title font, try Overpass-Black.ttf size 28. https://fontmeme.com/fonts/overpass-font/
 
 Started this as an edit of the VeLoCity Skin by dmtiir
 https://github.com/dmtiir/VeLoCity-Skin-for-VLC
