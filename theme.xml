@@ -199,13 +199,6 @@
     <SubBitmap id="bVolume" x="0" y="32" height="14" width="60"/>
   </Bitmap>
   <Bitmap id="fcBG" file="fcBG.png" alphacolor="#FF00FF"/>
-  <Bitmap id="opBG" file="opBG.png" alphacolor="#FF00FF"/>
-  <Bitmap id="optionsDemo" file="optionsDemo.png" alphacolor="#FF00FF">
-    <SubBitmap id="mushOp" x="0" y="0" height="60" width="150"/>
-    <SubBitmap id="mushMag" x="0" y="60" height="60" width="150"/>
-    <SubBitmap id="blushMag" x="0" y="120" height="60" width="150"/>
-    <SubBitmap id="blushOp" x="0" y="180" height="60" width="150"/>
-  </Bitmap>
   <Font id="timers" file="roboto.ttf" size="16"/>
   <Font id="titles" file="magnum.ttf" size="30"/>
   <Font id="playlists" file="overpass-mono-regular.otf" size="16"/>
@@ -286,6 +279,8 @@
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL2.load" x="30" y="2" tooltiptext="Load"/>
         <Button up="export" down="exportA" over="exportH" action="playlist.save()" id="mainPL2.export" x="60" y="2" tooltiptext="Save Playlist To File"/>
         <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL2.rec" x="90" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
+        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
         <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL2.screenshot" x="120" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
         <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL2.info" x="150" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL2.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
@@ -348,6 +343,8 @@
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL.load" x="30" y="2" tooltiptext="Load"/>
         <Button up="export" down="exportA" over="exportH" action="playlist.save()" id="mainPL.export" x="60" y="2" tooltiptext="Save Playlist To File"/>
         <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL.rec" x="90" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
+        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
         <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL.screenshot" x="120" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
         <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL.info" x="150" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
