@@ -186,7 +186,7 @@
   <Bitmap id="fcBG" file="fcBG.png" alphacolor="#FF00FF"/>
   <Font id="timers" file="roboto.ttf" size="16"/>
   <Font id="titles" file="magnum.ttf" size="30"/>
-  <Font id="playlists" file="consolas.ttf" size="16"/>
+  <Font id="playlists" file="overpass-mono-regular.otf" size="16"/>
 
   <Window id="player">
     <Layout id="main" width="1920" height="1156" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
