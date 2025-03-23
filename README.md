@@ -16,8 +16,8 @@ All modes:
 Main Player:
 - Resizable, 360x110 pixels and up
 - Pin, Load, Save Playlist, Record, Snapshot, Media Info, Minimize, Maximize, Full Screen buttons on top
-- Playlist, Repeat, Shuffle, and mute on bottom
-- Playlist button deploys 360 pixel wide scrollable playlist on the right side of the center window
+- Playlist, Repeat, Shuffle, and mute on bottom (increase and decrease playback speed can be enabled from option button in maximized window)
+- Playlist button deploys 360 pixel wide scrollable playlist on the right side of the center window (alternate 720 pixel wide jumbo playlist option can be enabled in maximized window)
 - Media (Cover art & title (auto-scrolling) or video) shift to the left of playlist
 
 Small Player:
@@ -45,11 +45,10 @@ Installation:
 Text is too small/large?
 - Extract theme with 7zip
 - Open theme.xml with editor/notepad
-- Search/scroll to  <Font "playlists" file="consolas.ttf" size="16"/>
+- Search/scroll to  <Font "playlists" file="overpass-mono-regular.ttf" size="15"/>
 - Change size
-- Recompress as zip or tar; change extension to .vlt
+- Recompress folder as zip or tar; change extension to .vlt
 - This will only affect the playlists.  They are spaced based just on the font size so this won't break anything.
-- You can also try other fonts by changing the string or just name another .ttf font "consolas.ttf" and replace the original.  Fonts without a default double-space put way too little space between words.
 
 Started this as an edit of the VeLoCity Skin by dmtiir
 https://github.com/dmtiir/VeLoCity-Skin-for-VLC
