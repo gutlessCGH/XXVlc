@@ -1,5 +1,5 @@
 <Theme version="2.0">
-  <ThemeInfo name="XXVlc Mushroom" author="gutless" email="wielandrew@live.com" webpage=""/>
+  <ThemeInfo name="XXVlc Mushroom" author="gutless" email="wielandrew@live.com" webpage="https://github.com/gutlessCGH/XXVlc/tree/main"/>
 
   <Bitmap id="buttons20" file="buttons20.png" alphacolor="#FF00FF">
     <SubBitmap id="close" x="0" y="0" height="20" width="30"/>
@@ -116,6 +116,15 @@
     <SubBitmap id="faster" x="158" y="0" height="30" width="30"/>
     <SubBitmap id="fasterH" x="158" y="30" height="30" width="30"/>
     <SubBitmap id="fasterA" x="158" y="60" height="30" width="30"/>
+    <SubBitmap id="plAdd" x="188" y="3" height="24" width="30"/>
+    <SubBitmap id="plAddH" x="188" y="33" height="24" width="30"/>
+    <SubBitmap id="plAddA" x="188" y="63" height="24" width="30"/>
+    <SubBitmap id="plDel" x="218" y="3" height="24" width="30"/>
+    <SubBitmap id="plDelH" x="218" y="33" height="24" width="30"/>
+    <SubBitmap id="plDelA" x="218" y="63" height="24" width="30"/>
+    <SubBitmap id="plSave" x="248" y="3" height="24" width="30"/>
+    <SubBitmap id="plSaveH" x="248" y="33" height="24" width="30"/>
+    <SubBitmap id="plSaveA" x="248" y="63" height="24" width="30"/>
   </Bitmap>
   <Bitmap id="buttons15" file="buttons15.png" alphacolor="#FF00FF">
     <SubBitmap id="10pin" x="0" y="0" height="14" width="30"/>
@@ -216,12 +225,11 @@
         <Image id="main.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="main.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="main.load" x="30" y="2" tooltiptext="Load"/>
-        <Button up="export" down="exportA" over="exportH" action="playlist.save()" id="main.export" x="60" y="2" tooltiptext="Save Playlist To File"/>
-        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="main.screenshot" x="120" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
-        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="main.rec" x="90" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
-        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="main.jumboToggle" x="180" y="2" visible="player.isMaximized"/>
-        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="main.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
-        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="main.info" x="150" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
+        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="main.screenshot" x="90" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
+        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="main.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
+        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="main.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
+        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="main.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="main.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="main.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize VLC"/>
         <Button up="mMode" down="mMode" over="mModeH" action="player.hide();minimalist.show();minimalist.setLayout(minimal)" id="main.setMinimal" x="1770" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimal Mode"/>
         <Button up="sMode" down="sModeA" over="sModeH" action="player.hide();sPlayer.show()" id="main.small" x="1800" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Small Mode"/>
@@ -277,12 +285,11 @@
         <Image id="mainPL2.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="mainPL2.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL2.load" x="30" y="2" tooltiptext="Load"/>
-        <Button up="export" down="exportA" over="exportH" action="playlist.save()" id="mainPL2.export" x="60" y="2" tooltiptext="Save Playlist To File"/>
-        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL2.rec" x="90" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
-        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="180" y="2" visible="player.isMaximized"/>
-        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
-        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL2.screenshot" x="120" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
-        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL2.info" x="150" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
+        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL2.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
+        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
+        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL2.screenshot" x="90" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
+        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL2.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL2.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
         <Button up="mMode" down="mMode" over="mModeH" action="player.hide();minimalist.show();minimalist.setLayout(minimal)" id="mainPL2.setMinimal" x="1770" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimal Mode"/>
         <Button up="sMode" down="sModeA" over="sModeH" action="player.hide();sPlayer.show()" id="mainPL2.small" x="1800" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Small Mode"/>
@@ -298,6 +305,9 @@
         <Playtree id="mainPL2.playtree" font="playlists" bgcolor1="#1C1A18" bgcolor2="#000000" fgcolor="#665D4D" selcolor="#36322B" playcolor="#90836C" x="1200" width="710" height="1080" lefttop="righttop" rightbottom="rightbottom">
           <Slider id="mainPL2.playtreeThumb" x="1914" y="10" points="(0,1060),(0,0)" thickness="0" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="mainPL2.plAddFile" x="1820" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="mainPL2.plRemoveFile" x="1850" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="mainPL2.plSaveFile" x="1880" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
       <Panel id="mainPL2.bottombar" y="1104" width="1920" height="50" lefttop="leftbottom" rightbottom="rightbottom">
         <Image id="mainPL2.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -341,12 +351,11 @@
         <Image id="mainPL.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="mainPL.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL.load" x="30" y="2" tooltiptext="Load"/>
-        <Button up="export" down="exportA" over="exportH" action="playlist.save()" id="mainPL.export" x="60" y="2" tooltiptext="Save Playlist To File"/>
-        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL.rec" x="90" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
-        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="180" y="2" visible="player.isMaximized"/>
-        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
-        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL.screenshot" x="120" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
-        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL.info" x="150" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
+        <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
+        <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
+        <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL.screenshot" x="90" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
+        <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
         <Button up="mMode" down="mMode" over="mModeH" action="player.hide();minimalist.show();minimalist.setLayout(minimal)" id="mainPL.setMinimal" x="1770" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimal Mode"/>
         <Button up="sMode" down="sModeA" over="sModeH" action="player.hide();sPlayer.show()" id="mainPL.small" x="1800" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Small Mode"/>
@@ -362,6 +371,9 @@
         <Playtree id="mainPL.playtree" font="playlists" bgcolor1="#1C1A18" bgcolor2="#000000" fgcolor="#665D4D" selcolor="#36322B" playcolor="#90836C" x="1560" width="350" height="1080" lefttop="righttop" rightbottom="rightbottom">
           <Slider id="mainPL.playtreeThumb" x="1914" y="10" points="(0,1060),(0,0)" thickness="0" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="mainPL.plAddFile" x="1820" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="mainPL.plRemoveFile" x="1850" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="mainPL.plSaveFile" x="1880" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
       <Panel id="mainPL.bottombar" y="1104" width="1920" height="50" lefttop="leftbottom" rightbottom="rightbottom">
         <Image id="mainPL.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -426,6 +438,9 @@
           <Slider id="sPL.playtreethumb" x="293" y="15" points="(0,254),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
         <Image id="sPL.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPL.plAddFile" x="204" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPL.plRemoveFile" x="234" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPL.plSaveFile" x="264" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
     </Layout>
     <Layout id="sPLV" width="300" height="690" minwidth="300" maxwidth="300" minheight="492" maxheight="4800">
@@ -467,6 +482,9 @@
           <Slider id="sPLV.playtreethumb" x="293" y="15" points="(0,254),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
         <Image id="sPLV.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPLV.plAddFile" x="204" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPLV.plRemoveFile" x="234" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPLV.plSaveFile" x="264" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
     </Layout>
     <Layout id="sMain" width="300" height="100" minwidth="300" maxwidth="300" minheight="100" maxheight="100">
