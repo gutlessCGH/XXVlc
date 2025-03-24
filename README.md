@@ -25,6 +25,7 @@ Small Player:
 - Cycle through 3 modes (basic, w/ playlist, w/ video/art window & playlist)
 - Playlists deploy from the bottom and are expandable, scrollable, and track the currently playing file
 - Pin, Repeat, Shuffle, Mute, Volume Slider, and Minimize on top
+- Add to, Remove from, and Save Playlist Buttons at the bottom
 - Titles scroll across full width
 
 Minimal Player:
