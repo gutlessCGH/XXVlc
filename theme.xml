@@ -219,9 +219,9 @@
         <Image id="main.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="main.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="main.neCorner" x="1914" image="NE6x24" action="move" lefttop="righttop" rightbottom="righttop"/>
-        <Image id="main.recNo" x="90" y="2" image="recNo" action="move"/>
-        <Image id="main.screenshotNo" x="120" y="2" image="screenshotNo" action="move"/>
-        <Image id="main.infoNo" x="150" y="2" image="infoNo" action="move"/>
+        <Image id="main.recNo" x="60" y="2" image="recNo" action="move"/>
+        <Image id="main.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
+        <Image id="main.infoNo" x="120" y="2" image="infoNo" action="move"/>
         <Image id="main.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="main.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="main.load" x="30" y="2" tooltiptext="Load"/>
@@ -279,9 +279,9 @@
         <Image id="mainPL2.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL2.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL2.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
-        <Image id="mainPL2.recNo" x="90" y="2" image="recNo" action="move"/>
-        <Image id="mainPL2.screenshotNo" x="120" y="2" image="screenshotNo" action="move"/>
-        <Image id="mainPL2.infoNo" x="150" y="2" image="infoNo" action="move"/>
+        <Image id="mainPL2.recNo" x="60" y="2" image="recNo" action="move"/>
+        <Image id="mainPL2.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
+        <Image id="mainPL2.infoNo" x="120" y="2" image="infoNo" action="move"/>
         <Image id="mainPL2.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="mainPL2.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL2.load" x="30" y="2" tooltiptext="Load"/>
@@ -345,9 +345,9 @@
         <Image id="mainPL.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
-        <Image id="mainPL.recNo" x="90" y="2" image="recNo" action="move"/>
-        <Image id="mainPL.screenshotNo" x="120" y="2" image="screenshotNo" action="move"/>
-        <Image id="mainPL.infoNo" x="150" y="2" image="infoNo" action="move"/>
+        <Image id="mainPL.recNo" x="60" y="2" image="recNo" action="move"/>
+        <Image id="mainPL.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
+        <Image id="mainPL.infoNo" x="120" y="2" image="infoNo" action="move"/>
         <Image id="mainPL.fullscreenNo" x="1860" y="2" image="fullscreenNo" action="move" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="mainPL.pin" y="2"/>
         <Button up="load" down="loadA" over="loadH" action="playlist.add()" id="mainPL.load" x="30" y="2" tooltiptext="Load"/>
