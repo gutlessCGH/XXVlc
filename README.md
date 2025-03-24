@@ -24,6 +24,9 @@ Main Player:
 - Media (Cover art & title (auto-scrolling) or video) shift to the left of playlist
 
 Small Player:
+
+![XXVlc Small Player Demo](https://i.imgur.com/h1sGO9O.jpeg)
+
 - 300 pixels wide
 - Cycle through 3 modes (basic, w/ playlist, w/ video/art window & playlist)
 - Playlists deploy from the bottom and are expandable, scrollable, and track the currently playing file
@@ -32,9 +35,16 @@ Small Player:
 - Titles scroll across full width
 
 Minimal Player:
+
+![XXVlc Minimal Player Demo](https://i.imgur.com/AWO8g3q.jpeg)
+
 - Resizable video player window with 14 pixel wide top & bottom bars
 - Additional blackout mode darkens the buttons/sliders (they still highlight on hover)
 - Skinned VLC windows will not automatically snap to one quarter or one half of the screen in windows.  The minimal player maintains a separate layout from the main player in this skin so I keep mine at 1080p.  When I want video on 1/4 of my 4k monitor, I just switch to the minimal player.
+
+Fullscreen Controller:
+
+![XXVlc Fullscreen Controller Demo](https://i.imgur.com/qZ9RtxC.jpeg)
 
 Known issues:
 - Fullscreen controller won't show up immediately after applying the skin.  Close VLC and reopen to fix.
