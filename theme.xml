@@ -438,9 +438,9 @@
           <Slider id="sPL.playtreethumb" x="293" y="15" points="(0,254),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
         <Image id="sPL.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
-	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPL.plAddFile" x="204" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
-	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPL.plRemoveFile" x="234" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
-	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPL.plSaveFile" x="264" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPL.plAddFile" x="195" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPL.plRemoveFile" x="225" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPL.plSaveFile" x="255" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
     </Layout>
     <Layout id="sPLV" width="300" height="690" minwidth="300" maxwidth="300" minheight="492" maxheight="4800">
@@ -482,9 +482,9 @@
           <Slider id="sPLV.playtreethumb" x="293" y="15" points="(0,254),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
         <Image id="sPLV.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
-	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPLV.plAddFile" x="204" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
-	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPLV.plRemoveFile" x="234" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
-	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPLV.plSaveFile" x="264" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPLV.plAddFile" x="195" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPLV.plRemoveFile" x="225" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
+	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPLV.plSaveFile" x="255" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
     </Layout>
     <Layout id="sMain" width="300" height="100" minwidth="300" maxwidth="300" minheight="100" maxheight="100">
@@ -606,6 +606,7 @@
           <SliderBackground id="fcMain.volumeControllerBG" image="volume" nbvert="1"/>
         </Slider>
         <Text text="$V%" font="timers" alignment="center" color="#665D4D" id="fcMain.volumetext" x="240" y="3" width="40"/>
+        <Button up="fullscreenOff" down="fullscreenOffA" over="fullscreenOffH" action="vlc.fullscreen()" id="fcMain.fullscreenOff" x="340" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Exit Fullscreen"/>
         <Button up="close" down="closeA" over="closeH" action="vlc.quit()" id="fcMain.close" x="370" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Quit VLC"/>
         <Button up="prev" down="prevA" over="prevH" action="playlist.previous()" id="fcMain.prev" x="145" y="39" tooltiptext="Play Previous In Playlist"/>
         <Checkbox state="vlc.isPlaying" up1="play" up2="pause" down1="playA" down2="pauseA" over1="playH" over2="pauseH" action1="vlc.play()" action2="vlc.pause()" tooltiptext1="Play" tooltiptext2="Pause" id="fcMain.playPause" x="185" y="39"/>
