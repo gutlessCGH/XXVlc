@@ -14,6 +14,9 @@ All modes:
 - Fonts that minimize kerning issues inherent to VLC skins
 
 Main Player:
+
+![XXVlc Main Player Demo](https://i.imgur.com/15wvwnf.jpeg)
+
 - Resizable, 360x110 pixels and up
 - Pin, Load, Save Playlist, Record, Snapshot, Media Info, Minimize, Maximize, Full Screen buttons on top
 - Playlist, Repeat, Shuffle, and mute on bottom (increase and decrease playback speed can be enabled from option button in maximized window)
