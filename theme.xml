@@ -211,8 +211,6 @@
     <SubBitmap id="mVolume" x="0" y="18" height="14" width="60"/>
     <SubBitmap id="bVolume" x="0" y="32" height="14" width="60"/>
   </Bitmap>
-  <Bitmap id="volumeBG2" file="volumeBG2.png" alphacolor="#FF00FF"/>
-  <Bitmap id="seek2" file="seek2.png" alphacolor="#FF00FF"/>
   <Bitmap id="fcBG" file="fcBG.png" alphacolor="#FF00FF"/>
   <Font id="timers" file="roboto.ttf" size="16"/>
   <Font id="titles" file="magnum.ttf" size="30"/>
@@ -270,14 +268,13 @@
             <Text text="$d" font="timers" alignment="right" color="#665D4D" id="main.timeDuration" x="188" y="6" width="70"/>
           </Panel>
         </Panel>
-        <Slider id="main.volumeSlider" x="1843" y="4" points="(0,9),(120,9)" thickness="120" value="volume" tooltiptext="Volume: $V%" up="seek2" down="seek2" over="seek2" lefttop="righttop" rightbottom="righttop">
-          <SliderBackground id="normal.volumeSliderBG" image="volume" nbvert="1"/>
-        </Slider>
-	<Image id="main.volumeblocker" x="1722" y="4" image="bg120x20"/>
         <Slider id="main.timeSlider" x="110" y="4" points="(0,9),(1688,9)" thickness="0" value="time" tooltiptext="" up="seek" down="seekA" over="seekH" lefttop="leftbottom" rightbottom="rightbottom">
           <SliderBackground id="main.timeSliderBG" image="time" nbvert="1"/>
         </Slider>
         <Checkbox state="vlc.isMute" up1="volumeOnA" up2="volumeOffA" down1="volumeOff" down2="volumeOn" over1="volumeOffH" over2="volumeOnH" action1="vlc.mute()" action2="vlc.mute()" tooltiptext1="Mute" tooltiptext2="Unmute" id="main.mute" x="1805" y="3" lefttop="righttop" rightbottom="righttop"/>
+        <Slider id="main.volumeSlider" x="1843" y="4" points="(0,9),(60,9)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="seek" down="seekA" over="seekH" lefttop="righttop" rightbottom="righttop">
+          <SliderBackground id="normal.volumeSliderBG" image="volume" nbvert="1"/>
+        </Slider>
       </Panel>
     </Layout>
     <Layout id="mainPL2" width="1920" height="1156" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
