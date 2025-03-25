@@ -584,7 +584,7 @@
         <Slider id="blackout.volumeSlider" x="1786" y="0" points="(0,7),(120,7)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="blank" down="blank" over="blank" lefttop="righttop" rightbottom="righttop">
           <SliderBackground id="blackout.volumeSliderBG" image="bvolumeBG" nbvert="120"/>
         </Slider>
-        <Text text="$V%" font="timers" alignment="center" color="#544E44" id="blackout.volumetext" x="1848" y="0" width="58" lefttop="righttop" rightbottom="righttop"/>
+        <Text text="$V%" font="timers" alignment="center" color="#36322B" id="blackout.volumetext" x="1848" y="0" width="58" lefttop="righttop" rightbottom="righttop"/>
       </Panel>
     </Layout>
   </Window>
