@@ -184,8 +184,8 @@
     <SubBitmap id="sTime" x="0" y="0" height="18" width="228"/>
   </Bitmap>
   <Bitmap id="minTime" file="minTime.png" alphacolor="#FF00FF">
-    <SubBitmap id="mTime" x="0" y="0" height="14" width="1670"/>
-    <SubBitmap id="bTime" x="0" y="14" height="14" width="1670"/>
+    <SubBitmap id="mTime" x="0" y="0" height="14" width="1622"/>
+    <SubBitmap id="bTime" x="0" y="14" height="14" width="1622"/>
   </Bitmap>
   <Bitmap id="backgrounds" file="backgrounds.png" alphacolor="#FF00FF">
     <SubBitmap id="bg1920x1080" x="0" y="0" height="1080" width="1920"/>
@@ -206,12 +206,9 @@
     <SubBitmap id="blend1908x1" x="0" y="1080" height="1" width="1908"/>
     <SubBitmap id="blackPixelBG" x="0" y="0" height="1" width="1"/>
   </Bitmap>
-  <Bitmap id="volumeBG" file="volumeBG.png" alphacolor="#FF00FF">
-    <SubBitmap id="volume" x="0" y="0" height="18" width="60"/>
-    <SubBitmap id="mVolume" x="0" y="18" height="14" width="60"/>
-    <SubBitmap id="bVolume" x="0" y="32" height="14" width="60"/>
-  </Bitmap>
   <Bitmap id="volumeBG2" file="volume2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="mvolumeBG" file="mvolume.png" alphacolor="#FF00FF"/>
+  <Bitmap id="bvolumeBG" file="bvolume.png" alphacolor="#FF00FF"/>
   <Bitmap id="fcBG" file="fcBG.png" alphacolor="#FF00FF"/>
   <Font id="timers" file="roboto.ttf" size="16"/>
   <Font id="titles" file="magnum.ttf" size="30"/>
@@ -549,13 +546,14 @@
         <Button up="10prev" down="10prevC" over="10prevH" action="playlist.previous()" id="minimal.prev" x="15" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
         <Checkbox state="vlc.isPlaying" up1="10play" up2="10pause" down1="10playC" down2="10pauseC" over1="10playH" over2="10pauseH" action1="vlc.play()" action2="vlc.pause()" tooltiptext1="" tooltiptext2="" id="minimal.playPause" x="45" y="0" lefttop="leftbottom" rightbottom="leftbottom"/>
         <Button up="10next" down="10nextC" over="10nextH" action="playlist.next()" id="minimal.next" x="75" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
-        <Slider id="minimal.timeSlider" x="118" y="0" points="(0,7),(1680,7)" thickness="0" value="time" tooltiptext="" up="mSeek" down="mSeekA" over="mSeekH" lefttop="leftbottom" rightbottom="rightbottom">
+        <Slider id="minimal.timeSlider" x="118" y="0" points="(0,7),(1622,7)" thickness="0" value="time" tooltiptext="" up="mSeek" down="mSeekA" over="mSeekH" lefttop="leftbottom" rightbottom="rightbottom">
           <SliderBackground id="minimal.timeSliderBG" image="mTime" nbvert="1"/>
         </Slider>
-        <Checkbox state="vlc.isMute" up1="10mute" up2="10muteC" down1="10muteC" down2="10muteH" over1="10muteD" over2="10muteH" action1="vlc.mute()" action2="vlc.mute()" tooltiptext1="" tooltiptext2="" id="minimal.mute" x="1799" y="0" lefttop="righttop" rightbottom="righttop"/>
-        <Slider id="minimal.volumeSlider" x="1837" y="0" points="(0,7),(60,7)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="mSeek" down="mSeekA" over="mSeekH" lefttop="righttop" rightbottom="righttop">
-          <SliderBackground id="minimal.volumeSliderBG" image="mVolume" nbvert="1"/>
+        <Checkbox state="vlc.isMute" up1="10mute" up2="10muteC" down1="10muteC" down2="10muteH" over1="10muteD" over2="10muteH" action1="vlc.mute()" action2="vlc.mute()" tooltiptext1="" tooltiptext2="" id="minimal.mute" x="1748" y="0" lefttop="righttop" rightbottom="righttop"/>
+        <Slider id="minimal.volumeSlider" x="1786" y="0" points="(0,7),(120,7)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="blank" down="blank" over="blank" lefttop="righttop" rightbottom="righttop">
+          <SliderBackground id="minimal.volumeSliderBG" image="mvolumeBG" nbvert="120"/>
         </Slider>
+        <Text text="$V%" font="timers" alignment="center" color="#665D4D" id="minimal.volumetext" x="1848" y="0" width="58" lefttop="righttop" rightbottom="righttop"/>
       </Panel>
     </Layout>
     <Layout id="blackout" width="1920" height="1108" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
@@ -579,13 +577,14 @@
         <Button up="10blackout" down="10prevC" over="10prevH" action="playlist.previous()" id="blackout.prev" x="15" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
         <Checkbox state="vlc.isPlaying" up1="10blackout" up2="10blackout" down1="10playC" down2="10pauseC" over1="10playH" over2="10pauseH" action1="vlc.play()" action2="vlc.pause()" tooltiptext1="" tooltiptext2="" id="blackout.playPause" x="45" y="0" lefttop="leftbottom" rightbottom="leftbottom"/>
         <Button up="10blackout" down="10nextC" over="10nextH" action="playlist.next()" id="blackout.next" x="75" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
-        <Slider id="blackout.timeSlider" x="118" y="0" points="(0,7),(1680,7)" thickness="0" value="time" tooltiptext="" up="bSeek" down="bSeekA" over="bSeekH" lefttop="leftbottom" rightbottom="rightbottom">
+        <Slider id="blackout.timeSlider" x="118" y="0" points="(0,7),(1622,7)" thickness="0" value="time" tooltiptext="" up="mSeek" down="mSeekA" over="mSeekH" lefttop="leftbottom" rightbottom="rightbottom">
           <SliderBackground id="blackout.timeSliderBG" image="bTime" nbvert="1"/>
         </Slider>
-        <Checkbox state="vlc.isMute" up1="10blackout" up2="10blackout" down1="10muteC" down2="10muteH" over1="10muteD" over2="10muteH" action1="vlc.mute()" action2="vlc.mute()" tooltiptext1="" tooltiptext2="" id="blackout.mute" x="1799" y="0" lefttop="righttop" rightbottom="righttop"/>
-        <Slider id="blackout.volumeSlider" x="1837" y="0" points="(0,7),(60,7)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="bSeek" down="bSeekA" over="bSeekH" lefttop="righttop" rightbottom="righttop">
-          <SliderBackground id="blackout.volumeSliderBG" image="bVolume" nbvert="1"/>
+        <Checkbox state="vlc.isMute" up1="10mute" up2="10muteC" down1="10muteC" down2="10muteH" over1="10muteD" over2="10muteH" action1="vlc.mute()" action2="vlc.mute()" tooltiptext1="" tooltiptext2="" id="blackout.mute" x="1748" y="0" lefttop="righttop" rightbottom="righttop"/>
+        <Slider id="blackout.volumeSlider" x="1786" y="0" points="(0,7),(120,7)" thickness="0" value="volume" tooltiptext="Volume: $V%" up="blank" down="blank" over="blank" lefttop="righttop" rightbottom="righttop">
+          <SliderBackground id="blackout.volumeSliderBG" image="bvolumeBG" nbvert="120"/>
         </Slider>
+        <Text text="$V%" font="timers" alignment="center" color="#544E44" id="blackout.volumetext" x="1848" y="0" width="58" lefttop="righttop" rightbottom="righttop"/>
       </Panel>
     </Layout>
   </Window>
