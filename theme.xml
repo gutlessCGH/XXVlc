@@ -451,7 +451,7 @@
 	<Button up="vlcPl" down="vlcPlA" over="vlcPlH" action="dialogs.playlist()" tooltiptext="Open Unskinned Playlist" id="sPL.vlcPl" x="266" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
     </Layout>
-    <Layout id="sPLV" width="300" height="690" minwidth="300" maxwidth="300" minheight="492" maxheight="4800">
+    <Layout id="sPLV" width="300" height="690" minwidth="300" maxwidth="300" minheight="442" maxheight="4800">
       <Panel id="sPLV.topBar" width="300" height="24">
         <Image id="sPLV.topbarBG" image="splvTop300x24" action="move"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="sPLV.pin" y="2"/>
@@ -490,6 +490,7 @@
           <Slider id="sPLV.playtreethumb" x="293" y="15" points="(0,230),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
         <Image id="sPLV.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="sPLV.thumbCover" x="286" y="260" image="bg14x14" action="dialogs.playlist()" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPLV.plAddFile" x="176" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPLV.plRemoveFile" x="206" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPLV.plSaveFile" x="236" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
