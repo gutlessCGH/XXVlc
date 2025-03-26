@@ -206,7 +206,7 @@
     <SubBitmap id="blend1908x1" x="0" y="1080" height="1" width="1908"/>
     <SubBitmap id="blackPixelBG" x="0" y="0" height="1" width="1"/>
   </Bitmap>
-  <Bitmap id="volumeBG2" file="volume2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="volumeBG2" file="volume3.png" alphacolor="#FF00FF"/>
   <Bitmap id="mvolumeBG" file="mvolume.png" alphacolor="#FF00FF"/>
   <Bitmap id="bvolumeBG" file="bvolume.png" alphacolor="#FF00FF"/>
   <Bitmap id="fcBG" file="fcBG.png" alphacolor="#FF00FF"/>
