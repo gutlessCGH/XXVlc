@@ -179,6 +179,16 @@
     <SubBitmap id="SW12x52" x="0" y="50" height="52" width="12"/>
     <SubBitmap id="SE12x52" x="288" y="50" height="52" width="12"/>
   </Bitmap>
+  <Bitmap id="transCorners" file="transCorners.png" alphacolor="#FF00FF">
+    <SubBitmap id="splTopTrans300x96" x="0" y="0" height="96" width="300"/>
+    <SubBitmap id="splvTopTrans300x24" x="0" y="0" height="24" width="300"/>
+    <SubBitmap id="spTopTrans300x94" x="0" y="0" height="94" width="300"/>
+    <SubBitmap id="spBottomTrans300x6" x="0" y="96" height="6" width="300"/>
+    <SubBitmap id="NWTrans6x24" x="0" y="0" height="24" width="6"/>
+    <SubBitmap id="NETrans6x24" x="294" y="0" height="24" width="6"/>
+    <SubBitmap id="SWTrans12x52" x="0" y="50" height="52" width="12"/>
+    <SubBitmap id="SETrans12x52" x="288" y="50" height="52" width="12"/>
+  </Bitmap>
   <Bitmap id="time" file="time.png" alphacolor="#FF00FF">
     <SubBitmap id="fcTime" x="0" y="0" height="18" width="384"/>
     <SubBitmap id="sTime" x="0" y="0" height="18" width="228"/>
@@ -217,10 +227,12 @@
   <Window id="player">
     <Layout id="main" width="1920" height="1156" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
       <Panel id="main.topbar" width="1920" height="24" rightbottom="righttop">
-        <Image id="main.nwCorner" image="NW6x24" action="move"/>
+        <Image id="main.nwCorner" image="NWTrans6x24" action="move"/>
+        <Image id="main.nwCorner" image="NW6x24" action="move" visible="cornerToggle.isVisible"/>
         <Image id="main.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="main.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
-        <Image id="main.neCorner" x="1914" image="NE6x24" action="move" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="main.neCorner" x="1914" image="NETrans6x24" action="move" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="main.neCorner" x="1914" image="NE6x24" action="move" lefttop="righttop" rightbottom="righttop" visible="cornerToggle.isVisible"/>
         <Image id="main.recNo" x="60" y="2" image="recNo" action="move"/>
         <Image id="main.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
         <Image id="main.infoNo" x="120" y="2" image="infoNo" action="move"/>
@@ -231,6 +243,7 @@
         <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="main.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
         <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="main.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
         <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="main.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Checkbox state="cornerToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="cornerToggle.show()" action2="cornerToggle.hide()" tooltiptext1="Switch to Highlighted Square Corners" tooltiptext2="Switch to Transparent Window Corners" id="main.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
         <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="main.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="main.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize VLC"/>
         <Button up="mMode" down="mMode" over="mModeH" action="player.hide();minimalist.show();minimalist.setLayout(minimal)" id="main.setMinimal" x="1770" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimal Mode"/>
@@ -246,9 +259,11 @@
         <Text text="$N" font="titles" alignment="center" color="#665D4D" id="main.title" x="0" y="1051" width="1920" lefttop="leftbottom" rightbottom="rightbottom" visible="vlc.hasAudio and (vlc.isPlaying or vlc.isPaused)"/>
       </Panel>
       <Panel id="main.bottombar" y="1104" width="1920" height="52" lefttop="leftbottom" rightbottom="rightbottom">
-        <Image id="main.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="main.swCorner" image="SWTrans12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="main.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom" visible="cornerToggle.isVisible"/>
         <Image id="main.bottombarBG" x="12" image="bg1896x52" action="move" resize="scale" lefttop="leftbottom" rightbottom="rightbottom"/>
-        <Image id="main.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="main.seCorner" x="1908" image="SETrans12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="main.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom" visible="cornerToggle.isVisible"/>
         <Image id="main.bottomEdge" x="6" y="51" image="blend1908x1" action="move" resize="scale" lefttop="leftbottom" rightbottom="righttop"/>
         <Checkbox state="themeToggle.isVisible" up1="playlist" up2="playlist" down1="playlistA" down2="playlistA" over1="playlistH" over2="playlistH" action1="player.setLayout(mainPL)" action2="player.setLayout(mainPL2)" tooltiptext1="Open Playlist" tooltiptext2="Open Playlist" id="main.playlist" x="10" y="3" lefttop="leftbottom" rightbottom="leftbottom"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="main.repeatAll" x="40" y="3" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -277,10 +292,12 @@
     </Layout>
     <Layout id="mainPL2" width="1920" height="1156" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
       <Panel id="mainPL2.topbar" width="1920" height="24" rightbottom="righttop">
-        <Image id="mainPL2.nwCorner" image="NW6x24" action="move"/>
+        <Image id="mainPL2.nwCorner" image="NWTrans6x24" action="move"/>
+        <Image id="mainPL2.nwCorner" image="NW6x24" action="move" visible="cornerToggle.isVisible"/>
         <Image id="mainPL2.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL2.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
-        <Image id="mainPL2.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="mainPL2.neCorner" x="1914" image="NETrans6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
+       	<Image id="mainPL2.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop" visible="cornerToggle.isVisible"/>
         <Image id="mainPL2.recNo" x="60" y="2" image="recNo" action="move"/>
         <Image id="mainPL2.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
         <Image id="mainPL2.infoNo" x="120" y="2" image="infoNo" action="move"/>
@@ -290,6 +307,7 @@
         <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL2.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
         <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
         <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Checkbox state="cornerToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="cornerToggle.show()" action2="cornerToggle.hide()" tooltiptext1="Switch to Highlighted Square Corners" tooltiptext2="Switch to Transparent Window Corners" id="mainPL2.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
         <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL2.screenshot" x="90" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
         <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL2.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL2.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
@@ -313,9 +331,11 @@
 	<Button up="vlcPl" down="vlcPlA" over="vlcPlH" action="dialogs.playlist()" tooltiptext="Open Unskinned Playlist" id="mainPL2.vlcPl" x="1880" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
       <Panel id="mainPL2.bottombar" y="1104" width="1920" height="50" lefttop="leftbottom" rightbottom="rightbottom">
-        <Image id="mainPL2.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="mainPL2.swCorner" image="SWTrans12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="mainPL2.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom" visible="cornerToggle.isVisible"/>
         <Image id="mainPL2.bottombarBG" x="12" image="bg1896x52" action="move" resize="scale" lefttop="leftbottom" rightbottom="rightbottom"/>
-        <Image id="mainPL2.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="mainPL2.seCorner" x="1908" image="SETrans12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="mainPL2.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom" visible="cornerToggle.isVisible"/>
         <Image id="mainPL2.bottomEdge" x="6" y="51" image="blend1908x1" action="move" resize="scale" lefttop="leftbottom" rightbottom="righttop"/>
         <Button up="playlistA" down="playlist" over="playlistH" action="player.setLayout(main)" id="mainPL2.playlist" x="10" y="3"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="mainPL2.repeatAll" x="40" y="3" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -344,10 +364,12 @@
     </Layout>
     <Layout id="mainPL" width="1920" height="1156" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
       <Panel id="mainPL.topbar" width="1920" height="24" rightbottom="righttop">
-        <Image id="mainPL.nwCorner" image="NW6x24" action="move"/>
+        <Image id="mainPL.nwCorner" image="NWTrans6x24" action="move"/>
+        <Image id="mainPL.nwCorner" image="NW6x24" action="move" visible="cornerToggle.isVisible"/>
         <Image id="mainPL.topEdge" x="6" image="blend1908x1" action="move" resize="scale" rightbottom="righttop"/>
         <Image id="mainPL.topbarBG" x="6" y="1" image="bg1908x23" action="move" resize="scale" rightbottom="righttop"/>
-        <Image id="mainPL.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="mainPL.neCorner" x="1914" image="NETrans6x24" action="resizeE" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="mainPL.neCorner" x="1914" image="NE6x24" action="resizeE" lefttop="righttop" rightbottom="righttop" visible="cornerToggle.isVisible"/>
         <Image id="mainPL.recNo" x="60" y="2" image="recNo" action="move"/>
         <Image id="mainPL.screenshotNo" x="90" y="2" image="screenshotNo" action="move"/>
         <Image id="mainPL.infoNo" x="120" y="2" image="infoNo" action="move"/>
@@ -357,6 +379,7 @@
         <Checkbox state="vlc.isRecording" up1="recOff" up2="recOn" down1="recOffA" down2="recOnA" over1="recOffH" over2="recOnH" action1="vlc.toggleRecord()" action2="vlc.toggleRecord()" tooltiptext1="Start Recording" tooltiptext2="Stop Recording" id="mainPL.rec" x="60" y="2" visible="vlc.isPlaying or vlc.isPaused"/>
         <Checkbox state="themeToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="themeToggle.show()" action2="themeToggle.hide()" tooltiptext1="Set Jumbo Playlist Width" tooltiptext2="Disable Jumbo Playlist Width" id="mainPL2.jumboToggle" x="150" y="2" visible="player.isMaximized"/>
         <Checkbox state="speedToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="speedToggle.show()" action2="speedToggle.hide()" tooltiptext1="Show Playboack Speed Buttons" tooltiptext2="Hide Playback Speed Buttons" id="mainPL2.buttonsToggle" x="180" y="2" visible="player.isMaximized"/>
+        <Checkbox state="cornerToggle.isVisible" up1="togOff" up2="togOn" down1="togOffA" down2="togOnA" over1="togOffH" over2="togOnH" action1="cornerToggle.show()" action2="cornerToggle.hide()" tooltiptext1="Switch to Highlighted Square Corners" tooltiptext2="Switch to Transparent Window Corners" id="mainPL.buttonsToggle" x="210" y="2" visible="player.isMaximized"/>
         <Button up="screenshot" down="screenshotA" over="screenshotH" action="vlc.snapshot()" id="mainPL.screenshot" x="90" y="2" visible="vlc.hasVout and (vlc.isPlaying or vlc.isPaused)" tooltiptext="Screenshot"/>
         <Button up="info" down="infoA" over="infoH" action="dialogs.fileInfo()" id="mainPL.info" x="120" y="2" visible="vlc.isPlaying or vlc.isPaused" tooltiptext="Media Info"/>
         <Button up="min" down="minA" over="minH" action="vlc.minimize()" id="mainPL.min" x="1740" y="2" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize"/>
@@ -380,9 +403,11 @@
 	<Button up="vlcPl" down="vlcPlA" over="vlcPlH" action="dialogs.playlist()" tooltiptext="Open Unskinned Playlist" id="mainPL.vlcPl" x="1880" y="1056" lefttop="rightbottom" rightbottom="rightbottom"/>
       </Panel>
       <Panel id="mainPL.bottombar" y="1104" width="1920" height="50" lefttop="leftbottom" rightbottom="rightbottom">
-        <Image id="mainPL.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="mainPL.swCorner" image="SWTrans12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="mainPL.swCorner" image="SW12x52" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom" visible="cornerToggle.isVisible"/>
         <Image id="mainPL.bottombarBG" x="12" image="bg1896x52" action="move" resize="scale" lefttop="leftbottom" rightbottom="rightbottom"/>
-        <Image id="mainPL.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="mainPL.seCorner" x="1908" image="SETrans12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="mainPL.seCorner" x="1908" image="SE12x52" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom" visible="cornerToggle.isVisible"/>
         <Image id="mainPL.bottomEdge" x="6" y="51" image="blend1908x1" action="move" resize="scale" lefttop="leftbottom" rightbottom="righttop"/>
         <Button up="playlistA" down="playlist" over="playlistH" action="player.setLayout(main)" id="mainPL.playlist" x="10" y="3"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="mainPL.repeatAll" x="40" y="3" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -413,7 +438,8 @@
   <Window id="sPlayer" visible="false">
     <Layout id="sPL" width="300" height="386" minwidth="300" maxwidth="300" minheight="192" maxheight="4800">
       <Panel id="sPL.topbar" width="300" height="96">
-        <Image id="sPL.topbarBG" image="splTop300x96" action="move"/>
+        <Image id="sPL.topbarBG" image="splTopTrans300x96" action="move"/>
+        <Image id="sPL.topbarBG" image="splTop300x96" action="move" visible="cornerToggle.isVisible"/>
         <Text text="$N" font="titles" alignment="center" color="#665D4D" id="sPL.title" y="26" width="300"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="sPL.pin" y="2"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="sPL.repeatAll" x="27" y="2"/>
@@ -441,7 +467,8 @@
         <Playtree id="sPL.playtree" font="playlists" bgcolor1="#1A1715" bgcolor2="#000000" fgcolor="#6E6453" selcolor="#26221F" playcolor="#A19278" y="5" width="286" height="274" rightbottom="leftbottom">
           <Slider id="sPL.playtreethumb" x="293" y="15" points="(0,230),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
-        <Image id="sPL.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="sPL.bottomBar" y="284" image="spBottomTrans300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="sPL.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom" visible="cornerToggle.isVisible"/>
 	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPL.plAddFile" x="176" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPL.plRemoveFile" x="206" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plSave" down="plSaveA" over="plSaveH" action="playlist.save()" tooltiptext="Save Playlist to File" id="sPL.plSaveFile" x="236" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
@@ -450,7 +477,8 @@
     </Layout>
     <Layout id="sPLV" width="300" height="690" minwidth="300" maxwidth="300" minheight="442" maxheight="4800">
       <Panel id="sPLV.topBar" width="300" height="24">
-        <Image id="sPLV.topbarBG" image="splvTop300x24" action="move"/>
+        <Image id="sPLV.topbarBG" image="splvTopTrans300x24" action="move"/>
+        <Image id="sPLV.topbarBG" image="splvTop300x24" action="move" visible="cornerToggle.isVisible"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="sPLV.pin" y="2"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="sPLV.repeatAll" x="27" y="2"/>
         <Checkbox state="playlist.isRepeat" up1="blank" up2="repeatOne" down2="repeatOneA" over2="repeatOneH" action1="playlist.setRepeat(true)" action2="playlist.setRepeat(false);playlist.setLoop(false)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="sPLV.repeatOne" x="27" y="2"/>
@@ -486,7 +514,8 @@
         <Playtree id="sPLV.playtree" font="playlists" bgcolor1="#1A1715" bgcolor2="#000000" fgcolor="#6E6453" selcolor="#26221F" playcolor="#A19278" y="5" width="286" height="274" rightbottom="leftbottom">
           <Slider id="sPLV.playtreethumb" x="293" y="15" points="(0,230),(0,0)" tooltiptext="" up="thumb" down="thumbA" over="thumbH" lefttop="righttop" rightbottom="rightbottom"/>
         </Playtree>
-        <Image id="sPLV.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="sPLV.bottomBar" y="284" image="spBottomTrans300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="sPLV.bottomBar" y="284" image="spBottom300x6" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom" visible="cornerToggle.isVisible"/>
         <Image id="sPLV.thumbCover" x="286" y="260" image="bg14x14" action="dialogs.playlist()" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plAdd" down="plAddA" over="plAddH" action="playlist.add()" tooltiptext="Add File to Playlist" id="sPLV.plAddFile" x="176" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
 	<Button up="plDel" down="plDelA" over="plDelH" action="playlist.del()" tooltiptext="Remove Selected from Playlist" id="sPLV.plRemoveFile" x="206" y="260" lefttop="rightbottom" rightbottom="rightbottom"/>
@@ -496,8 +525,10 @@
     </Layout>
     <Layout id="sMain" width="300" height="100" minwidth="300" maxwidth="300" minheight="100" maxheight="100">
       <Panel id="sMain.background" width="300" height="100">
-        <Image id="sMain.topBG" image="spTop300x94" action="move"/>
-        <Image id="sMain.bottomBarBG" image="spBottom300x6" y="94" action="move"/>
+        <Image id="sMain.topBG" image="spTopTrans300x94" action="move"/>
+        <Image id="sMain.topBG" image="spTop300x94" action="move" visible="cornerToggle.isVisible"/>
+        <Image id="sMain.bottomBarBG" image="spBottomTrans300x6" y="94" action="move"/>
+        <Image id="sMain.bottomBarBG" image="spBottom300x6" y="94" action="move" visible="cornerToggle.isVisible"/>
         <Text text="$N" font="titles" alignment="center" color="#665D4D" id="sMain.title2" y="26" width="300"/>
         <Checkbox state="vlc.isOnTop" up1="pinOff" up2="pinOn" down1="pinOffA" down2="pinOnA" over1="pinOffH" over2="pinOnH" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="sMain.pin" y="2"/>
         <Checkbox state="playlist.isLoop" up1="repeatOff" up2="repeatAll" down1="repeatOffA" down2="repeatAllA" over1="repeatOffH" over2="repeatAllH" action1="playlist.setLoop(true)" action2="playlist.setLoop(false);playlist.setRepeat(true)" tooltiptext1="Toggle Playlist/Song Repeat" tooltiptext2="Toggle Playlist/Song Repeat" id="sMain.repeatAll" x="27" y="2"/>
@@ -526,7 +557,7 @@
     <Layout id="minimal" width="1920" height="1108" minwidth="360" maxwidth="7680" minheight="110" maxheight="4800">
       <Panel id="minimal.topbar" width="1920" height="14" rightbottom="righttop">
         <Image id="minimal.topbarBG" image="bg1920x14" action="move" resize="scale" rightbottom="righttop"/>
-        <Image id="minimal.fullscreenNo" image="10fullNo" action="move" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="minimal.fullscreenNo" image="10fullNo" action="move" x="1860" lefttop="righttop" rightbottom="righttop"/>
         <Checkbox state="vlc.isOnTop" up1="10pin" up2="10pinD" down1="10pinC" down2="10pinH" over1="pinOffH" over2="10pinC" action1="vlc.onTop()" action2="vlc.onTop()" tooltiptext1="Enable Always On Top" tooltiptext2="Disable Always On Top" id="minimal.pin" y="0"/>
         <Button up="10switch" down="10switch" over="10switchH" action="minimalist.setLayout(blackout)" id="minimal.minMode" x="1770" y="0" lefttop="righttop" rightbottom="righttop" tooltiptext="Switch Minimal Mode"/>
         <Button up="10min" down="10min" over="10minH" action="vlc.minimize()" id="minimal.min" x="1800" y="0" lefttop="righttop" rightbottom="righttop" tooltiptext="Minimize VLC"/>
@@ -542,6 +573,7 @@
       </Panel>
       <Panel id="minimal.bottombar" y="1094" width="1920" height="14" lefttop="leftbottom" rightbottom="rightbottom">
         <Image id="minimal.bottombarBG" image="bg1906x14" action="move" resize="scale" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Image id="minimal.swCorner" image="bg14x14" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
         <Image id="minimal.seCorner" x="1906" image="bg14x14" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
         <Button up="10prev" down="10prevC" over="10prevH" action="playlist.previous()" id="minimal.prev" x="15" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
         <Checkbox state="vlc.isPlaying" up1="10play" up2="10pause" down1="10playC" down2="10pauseC" over1="10playH" over2="10pauseH" action1="vlc.play()" action2="vlc.pause()" tooltiptext1="" tooltiptext2="" id="minimal.playPause" x="45" y="0" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -573,6 +605,7 @@
       </Panel>
       <Panel id="blackout.bottombar" y="1094" width="1920" height="14" lefttop="leftbottom" rightbottom="rightbottom">
         <Image id="blackout.bottombarBG" image="bg1906x14" action="move" resize="scale" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Image id="blackout.swCorner" image="bg14x14" action="resizeS" lefttop="leftbottom" rightbottom="leftbottom"/>
         <Image id="blackout.seCorner" x="1906" image="bg14x14" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
         <Button up="10blackout" down="10prevC" over="10prevH" action="playlist.previous()" id="blackout.prev" x="15" y="0" lefttop="leftbottom" rightbottom="leftbottom" tooltiptext=""/>
         <Checkbox state="vlc.isPlaying" up1="10blackout" up2="10blackout" down1="10playC" down2="10pauseC" over1="10playH" over2="10pauseH" action1="vlc.play()" action2="vlc.pause()" tooltiptext1="" tooltiptext2="" id="blackout.playPause" x="45" y="0" lefttop="leftbottom" rightbottom="leftbottom"/>
@@ -599,6 +632,13 @@
     <Layout id="speedPixel" width="1" height="1" minwidth="1" maxwidth="1" minheight="1" maxheight="1">
       <Panel id="speedPixel.pixel" x="0" y="0" width="1" height="1">
         <Image id="speedPixel.blackPixel" image="blackPixelBG"/>
+      </Panel>
+    </Layout>
+  </Window>
+  <Window id="cornerToggle" visible="false">
+    <Layout id="cornerPixel" width="1" height="1" minwidth="1" maxwidth="1" minheight="1" maxheight="1">
+      <Panel id="cornerPixel.pixel" x="0" y="0" width="1" height="1">
+        <Image id="cornerPixel.blackPixel" image="blackPixelBG"/>
       </Panel>
     </Layout>
   </Window>
